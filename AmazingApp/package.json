@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "fable": {
+    "entry": "src/AmazingApp.fsproj"
+  },
+  "scripts": {
+    "postinstall": "dotnet restore",
+    "build": "cd tools && dotnet fable webpack -- -p --config tools/webpack.config.prod.js",
+    "start": "cd tools && dotnet fable webpack-dev-server -- --config tools/webpack.config.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.0",
+    "copy-webpack-plugin": "^4.4.1",
+    "fable-loader": "^2.0.0",
+    "html-webpack-plugin": "2.29.0",
+    "html-webpack-polyfill-io-plugin": "^1.0.0",
+    "webpack": "3.8.1",
+    "webpack-dev-server": "2.9.4"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-pageloader": "^2.1.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "pouchdb": "^7.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}

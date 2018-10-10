@@ -1,0 +1,108 @@
+// ******************************************************* Bulma ****************************************************
+@charset "utf-8";
+@import "fa/font-awesome.scss";
+@import "../node_modules/bulma/bulma";
+
+// ******************************************************* LAYOUT ****************************************************
+
+
+// Small tablets and large smartphones (landscape view)
+$screen-mobile-s-min: 320px;
+
+$screen-mobile-m-min: 375px;
+
+$screen-mobile-l-min: 425px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-tablet-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Large tablets and desktops
+$screen-mac-min: 1440px;
+
+// full hd
+$screen-fhd-min: 1900px;
+
+@mixin ms {
+  @media (min-width: #{$screen-mobile-s-min}) {
+      @content;
+  }
+}
+
+@mixin mm {
+  @media (min-width: #{$screen-mobile-m-min}) {
+      @content;
+  }
+}
+@mixin ml {
+  @media (min-width: #{$screen-mobile-l-min}) {
+      @content;
+  }
+}
+
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-tablet-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin fhd {
+  @media (min-width: #{$screen-fhd-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin mac {
+  @media (min-width: #{$screen-mac-min}) {
+      @content;
+  }
+}
+
+html {
+  height: 100%;
+}
+// Needed otherwise iframes show a disabled scrollbar
+body {
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: 'Arial', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  height: 100%;
+}
+
