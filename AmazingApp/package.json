@@ -1,8 +1,12 @@
 {
   "private": true,
   "fable": {
-    "entry": "src/AmazingApp.fsproj",
-    "serviceWorker": "ServiceWorker/ServiceWorker.fsproj"
+    "entry": {
+      "fsproj":"src/AmazingApp.fsproj"
+    },
+    "serviceWorker": {
+      "fsproj":"ServiceWorker/ServiceWorker.fsproj"
+    }
   },
   "scripts": {
     "postinstall": "dotnet restore",

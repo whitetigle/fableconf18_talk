@@ -4,16 +4,16 @@ var common = require("./webpack.config.common");
 
 console.log("Bundling for development...");
 
-function exports (entry) {
+function exports (entry,fname) {
   return {
     devtool: "source-map",
-    entry: entry,
+    entry: entry.fsproj,
     output: {
-      filename: '[name].js',
+      filename: entry.output,
       path: common.config.buildDir,
       devtoolModuleFilenameTemplate: info =>
         path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
-    },
+    },    
     devServer: {
       contentBase: common.config.publicDir,
       publicPath: '/',
@@ -36,6 +36,6 @@ function exports (entry) {
 }
 
 module.exports = [
-  exports(common.config.entry),
-  exports(common.config.serviceWorker)
+  exports (common.config.fable.main),
+  exports (common.config.fable.serviceWorker)
 ]

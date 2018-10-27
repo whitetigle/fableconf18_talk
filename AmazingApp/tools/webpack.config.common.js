@@ -8,8 +8,16 @@ var packageJson = JSON.parse(fs.readFileSync(resolve('../package.json')).toStrin
 var errorMsg = "{0} missing in package.json";
 
 var config = {
-  entry: resolve(path.join("..", forceGet(packageJson, "fable.entry", errorMsg))),
-  serviceWorker: resolve(path.join("..", forceGet(packageJson, "fable.serviceWorker", errorMsg))),
+  fable: {
+    main: {
+      fsproj: resolve(path.join("..", "src/AmazingApp.fsproj")),
+      output: 'main.js'
+    },
+    serviceWorker: {
+      fsproj: resolve(path.join("..", "ServiceWorker/ServiceWorker.fsproj")),
+      output: 'sw.js'
+    }
+  },
   publicDir: resolve("../public"),
   buildDir: resolve("../build"),
   nodeModulesDir: resolve("../node_modules"),
