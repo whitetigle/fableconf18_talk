@@ -10,7 +10,7 @@ let [<Global>] self : ServiceWorker = jsNative
 let CACHE_NAME = sprintf "app-%s" (Version.number)
 
 let resources = [|
-    "/main.js"
+    ""
 |]
 
 self.addEventListener_install
