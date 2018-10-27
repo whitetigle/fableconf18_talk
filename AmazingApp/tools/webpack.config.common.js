@@ -9,6 +9,7 @@ var errorMsg = "{0} missing in package.json";
 
 var config = {
   entry: resolve(path.join("..", forceGet(packageJson, "fable.entry", errorMsg))),
+  serviceWorker: resolve(path.join("..", forceGet(packageJson, "fable.serviceWorker", errorMsg))),
   publicDir: resolve("../public"),
   buildDir: resolve("../build"),
   nodeModulesDir: resolve("../node_modules"),

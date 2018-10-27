@@ -17,11 +17,11 @@ promise {
 
     try
       // register service worker
-      #if DEBUG
-      printfn "DEBUG MODE - NO Service Worker"
-      #else
-      let! _ = "./sw.js" |> Browser.navigator.serviceWorker.register
-      #endif
+      //#if DEBUG
+      //printfn "DEBUG MODE - NO Service Worker"
+      //#else
+      let! _ = "./sw.js" |> Fable.Import.Browser.navigator.serviceWorker.register
+      //#endif
 
       Program.mkProgram Main.State.init Main.State.update Main.View.root
       |> Program.toNavigable (parseHash Router.pageParser) Main.State.setRoute

@@ -2,7 +2,7 @@ source https://nuget.org/api/v2
 storage:none
 
 clitool dotnet-fable
-nuget Fable.Core
+nuget Fable.Core = 2.0.0
 nuget Fable.Import.Browser
 nuget Fable.PowerPack
 nuget Fulma
