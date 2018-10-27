@@ -12,6 +12,9 @@ open Fable.PowerPack
 // register CSS
 importAll "../sass/main.scss"
 
+// see README.md for more information
+importAll "../build/sw.js"
+
 // start our app only if our service worker registered well
 promise {
 
@@ -30,6 +33,6 @@ promise {
       |> Program.withConsoleTrace
       |> Program.run
 
-    with exn -> printfn "%s" exn.Message
+    with exn -> printfn "No Service Worker in your browser! %s" exn.Message
 }
 |> Promise.start

@@ -2,6 +2,9 @@
     "short_name": "MyFablePWA",
     "name": "Fable powered PWA",
     "start_url": "/index.html",
+    "display":"fullscreen",
+    "orientation":"portrait",
+    "theme_color": "#317EFB",
     "icons": [
       {
        "src": "icons/android-icons-36x36.png",

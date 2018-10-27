@@ -2,7 +2,6 @@ var fs = require("fs");
 var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPolyfillIOPlugin = require('html-webpack-polyfill-io-plugin');
-// var DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin');
 
 var packageJson = JSON.parse(fs.readFileSync(resolve('../package.json')).toString());
 var errorMsg = "{0} missing in package.json";

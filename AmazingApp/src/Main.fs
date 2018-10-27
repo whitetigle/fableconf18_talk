@@ -49,6 +49,12 @@ module State =
             |> Update.activePage
               (ActivePage.Welcome (Page.Welcome.Types.initialModel))
               Route.Welcome
+        | None ->
+          model
+            |> Update.activePage
+              (ActivePage.Welcome (Page.Welcome.Types.initialModel))
+              Route.Welcome
+        
 
   let init location : Model * Cmd<Msg> = 
     

@@ -10,23 +10,7 @@ let [<Global>] self : ServiceWorker = jsNative
 let CACHE_NAME = sprintf "app-%s" (Version.number)
 
 let resources = [|
-    "/fonts/lato-v14-latin_latin-ext-italic.eot",
-    "/fonts/lato-v14-latin_latin-ext-italic.svg",
-    "/fonts/lato-v14-latin_latin-ext-italic.ttf",
-    "/fonts/lato-v14-latin_latin-ext-italic.woff",
-    "/fonts/lato-v14-latin_latin-ext-italic.woff2",
-    "/fonts/lato-v14-latin_latin-ext-regular.eot",
-    "/fonts/lato-v14-latin_latin-ext-regular.svg",
-    "/fonts/lato-v14-latin_latin-ext-regular.ttf",
-    "/fonts/lato-v14-latin_latin-ext-regular.woff",
-    "/fonts/lato-v14-latin_latin-ext-regular.woff2",
-    "/libs/fa.js",
-//    "/libs/fetch-es6-polyfill.js",
-    "https://cdn.polyfill.io/v2/polyfill.js?features=es6,fetch",
-    "/libs/pouchdb.authentication.min.js",
-//    "/libs/pouchdb.find.js",
-    "/libs/pouchdb.min.js",
-    "/bundle.js"
+    "/main.js"
 |]
 
 self.addEventListener_install

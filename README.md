@@ -1,2 +1,4 @@
-# fableconf18_talk
-FableConf2018 talk
+# FableConf2018 talk
+Progressive web apps with Fable and PouchDB
+
+
