@@ -27,4 +27,6 @@ module Welcome =
     open Fable.Helpers.React.Props
 
     let root model dispatch = 
-      div [] [ str "welcome" ]
+      div [] [ 
+        
+      ]

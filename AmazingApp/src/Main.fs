@@ -49,6 +49,7 @@ module State =
             |> Update.activePage
               (ActivePage.Welcome (Page.Welcome.Types.initialModel))
               Route.Welcome
+
         | None ->
           model
             |> Update.activePage
@@ -95,5 +96,12 @@ module View =
   open Fable.Helpers.React
   open Fable.Helpers.React.Props
   
-  let root (model:Model) dispatch = 
-    div[] [ str "ok"]
+  let root (model:Model) dispatch =
+    match model.ActivePage with 
+    | Some page -> 
+      match page with 
+      | Welcome model -> 
+        Page.Welcome.View.root model dispatch
+          
+    | None -> 
+      div[] [ str "No page" ]

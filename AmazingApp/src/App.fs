@@ -20,16 +20,16 @@ promise {
 
     try
       // register service worker
-      //#if DEBUG
-      //printfn "DEBUG MODE - NO Service Worker"
-      //#else
+      #if DEBUG
+      printfn "DEBUG MODE - NO Service Worker"
+      #else
       let! _ = "./sw.js" |> Fable.Import.Browser.navigator.serviceWorker.register
-      //#endif
+      #endif
 
       Program.mkProgram Main.State.init Main.State.update Main.View.root
       |> Program.toNavigable (parseHash Router.pageParser) Main.State.setRoute
       |> Program.withReact "elmish-app"
-      //|> Program.withHMR
+      |> Program.withHMR
       |> Program.withConsoleTrace
       |> Program.run
 

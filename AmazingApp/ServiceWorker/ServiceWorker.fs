@@ -32,7 +32,7 @@ self.addEventListener_activate(fun evt ->
             let promises : JS.Iterable<U2<_,JS.PromiseLike<bool>>> = !!keys.map(fun k _ _-> if k <> CACHE_NAME then Browser.console.log("[ServiceWorker] Removing old cache ", k); Browser.caches.delete(k) else promise{return true})
             let! _ = JS.Promise.all promises
             return None }))
-
+ 
 self.addEventListener_fetch(fun event ->
         Browser.console.log("Fetching")
         let req = event.request
